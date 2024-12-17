@@ -169,13 +169,64 @@ After the Hello world repo has been selected vscode will prompt for a location t
 *** github app
 
 ** making changes to the git repo
-git has a system on how it tracks files and while it will seem complicated at first it is a simple process.
+git has a system on how it tracks files and while it will seem complicated at first it is a simple process. First is to track and stage a file then to commit the file changes to the git repo and finally push the commited changes back to github.
 *** tracking files
-*** adding files
+git first needs a list of what files in its directory to be tracked this can be done with the terminal command git add
+#+begin_src zsh
+git add <Your file goes here>
+#+end_src
 *** staging files
+Behind the scenes git requires staged and unstaged changes to select which files will be added to a commit. git add will automatically stage a file but when making changes to a file you will need to stage it first before a commit can be made. This can be done with
+#+begin_src zsh
+git stage <Your file goes here>
+#+end_src
+git add will also work as well as the git documentation describes both git add and git stage as synonyms.
 *** Commiting changes
+git commits act like a save state you can roll back to. Think like in a video game quicksaving before doing something where you stand a high chance of dying. Both staging and tracking are the setup to making a commit for your version control. A commit needs both staged files and a message. In the command line it would look something like this.
+#+begin_src zsh
+git commit -m "Your message goes here"
+#+end_src
+Remember that messages in git have an upper limit of 50 characters so make your messages short.
 *** Making branches
+When multiple people are working on a remote git repository it may be best to keep work separate if two people make commits around the same time it could block the others work. In order to keep individual work separate you can use git branches to not interupt other peoples changes. A git branch can be made with the following command.
+#+begin_src zsh
+git checkout -b <Your new branch name>
+#+end_src
+branches can also be made on github by selecting the branches button
+
+[[./images/gitBranch2.png]]
+
+on your repository and selecting new branch
+
+[[./images/gitBranch3.png]]
+
+this branch will need to be pulled locally and can be pulled locally with the command
+#+begin_src zsh
+git pull
+#+end_src
+to change to the new branch if it is made on github use the command
+#+begin_src zsh
+git checkout <Your github branch name>
+#+end_src
 ** Pushing the git repo back to github
+After you have made all the changes you can use the command git push to upload your changes to github.
+#+begin_src zsh
+git push
+#+end_src
 ** Merging branches
-** Managing pull requests
+After you've made branches and commits. The next step is to merge branches. Merging a branch is a simple procedure on github.
+*** compare and pull request
+after a new branch is pushed to a notification will show up on github looking like this
+
+[[./images/gitBranch1.png]]
+
+selecting this button will open a new page to create a pull request to merge two branches.
+
+[[./images/gitBranch4.png]]
+
+creating the pull request will leave an open pull request. Approving the pull request and merging it will close it merging the two branches.
+
+[[./images/gitBranch5.png]]
+
+After the pull request has been merged you can either choose to delete the branch or keep commiting changes and merge again at a later date.
 ** Completed Repo
