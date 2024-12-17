@@ -1,0 +1,129 @@
+#+title: Readme
+#+author: Jackson Baker
+* Individual lab
+Welcome to the SE300 git lab this lab will help you gain an understanding into how coding in a team environment works in an industry setting utilizing the standard version control software git. This lab will take you through the steps on first managing an individual project with version control using git and a remote code repository hosted on github.
+** Create a github account
+if you do not already have a github account you should be able to click the sign up button on the upper right corner of this page.
+** Install git
+*** Windows
+The windows version of git should be located at [[https://git-scm.com/downloads/win]]
+**** Installer
+The installer is a simple wizard that you should be able to click through until it is installed
+**** Winget
+If you have winget installed you can install git through powershell using the following command
+#+begin_src zsh
+winget install --id Git.Git -e --source winget
+#+end_src
+*** Mac
+macOS should ship a copy of git with xcode so if you already have xcode you will already have xcode if you do not here are some options for installing on Mac.
+**** Xcode
+Xcode can be installed from this link [[https://developer.apple.com/xcode/]]
+**** Homebrew
+If you have homebrew installed run the following command to install git.
+#+begin_src zsh
+brew install git
+#+end_src
+if you do not have homebrew installed and want to use it here is a link to install homebrew [[https://brew.sh/]]
+**** MacPorts
+If you have MacPorts installed you can run the following command to install git.
+#+begin_src zsh
+sudo port install git
+#+end_src
+you can install MacPorts from this link [[https://www.macports.org/]]
+**** Alternative installation methods
+The official git website lists several other alternative ways to install git and can be found at [[https://git-scm.com/downloads/mac]]
+*** Linux
+Git for some linux distributions comes by default but below is a list on how to install git for several linux and unix distributions. If these commands do not work and give a permission denied error add sudo to the beginning of the command if it is not already there.
+**** Debian
+#+begin_src zsh
+sudo apt-get install git
+#+end_src
+or
+#+begin_src zsh
+sudo apt install git
+#+end_src
+**** Fedora
+#+begin_src zsh
+yum install git
+#+end_src
+or depending on fedora version
+#+begin_src zsh
+dnf install git
+#+end_src
+**** Gentoo
+#+begin_src zsh
+sudo emerge --ask dev-vcs/git
+#+end_src
+**** Arch
+#+begin_src zsh
+sudo pacman -S git
+#+end_src
+**** openSUSE
+#+begin_src zsh
+zypper install git
+#+end_src
+**** Mageia
+#+begin_src zsh
+urpmi git
+#+end_src
+**** Nix/NixOS
+#+begin_src zsh
+nix-env -i git
+#+end_src
+**** FreeBSD
+#+begin_src zsh
+pkg install git
+#+end_src
+**** Solaris 9/10/11
+#+begin_src zsh
+pkgutil -i git
+#+end_src
+**** Solaris 11 Express
+#+begin_src zsh
+pkg install developer/versioning/git
+#+end_src
+**** OpenBSD
+#+begin_src zsh
+pkg_add git
+#+end_src
+**** Alpine
+#+begin_src zsh
+apk add git
+#+end_src
+**** Slitaz
+#+begin_src zsh
+tazpkg get-install git
+#+end_src
+
+** Connecting git and github
+There are several ways to connect a git repository and a github account however there are some steps first to do before starting with connecting to github. Git has a config on your computer that tracks who you are when you are making changes in repositories.
+
+Setting a username
+#+begin_src zsh
+git config --global user.name "Your username goes here"
+#+end_src
+
+Setting an email
+#+begin_src zsh
+git config --global user.email "Your github email goes here"
+#+end_src
+
+*** Connect by VScode
+
+*** Connect by Xcode
+
+*** Connect by SSH key
+github has a guide for adding and using an sshkey which can be found here [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]]
+*** Connect by github app
+** Making a repository in github
+** Pull the git repository from github to your computer
+** making changes to the git repo
+*** tracking files
+*** adding files
+*** staging files
+*** Commiting changes
+*** Making branches
+** Pushing the git repo back to github
+** Merging branches
+** Managing pull requests
+** Completed Repo
