@@ -119,14 +119,20 @@ github has a guide for adding and using an sshkey which can be found here [[http
 This way of making a repository is the most simple for a person with no experience in git or github. Alternative methods require knowledge that will be given in later sections.
 **** Go to github profile
 if you have already made a github account your dashboard should be visible from [[https://github.com]] from here you can create a new repository from the repository bar on the left
+
 [[./images/newRepo.png]]
+
 **** Name and create the repository
 A repository needs a name for this assignment fill in the field with "SE300HelloWorld"
+
 [[./images/newRepoName.png]]
+
 Once you have names the repository click the create button and the repository will be made on github.
 **** Final product
 Your new create repository should look something like the picture below
+
 [[./images/initialRepoState.png]]
+
 ** Pull the git repository from github to your computer
 Once you have made your repository on github the next step it to pull the repository onto your computer to make changes. This can be done with the following command.
 *** Command Line
@@ -135,20 +141,31 @@ git clone "link to your github goes here"
 #+end_src
 *** Vscode
 select the source control tab on the left hand side
+
 [[./images/vscodeSourceControl.png]]
+
 after clicking this symbol you will the following window
+
 [[./images/vscodeSourceControlWindow.png]]
+
 clicking on clone repository will give the following prompt at the top of the vscode window
+
 [[./images/cloneFromGithubvscode.png]]
+
 clicking on the clone from github tab will ask you for permission to log into github from this you will log into github and then your repo will be cloned.
 
 Permission will look similar to this screenshot
+
 [[./images/vscodeVerifyGithub.png]]
 
 once permission is given the top of the vscode window will look something like this
+
 [[./images/vscodeCloneRepo.png]]
+
 After the Hello world repo has been selected vscode will prompt for a location to clone your repo after selecting a location vscode should now have the repository clone and look like this.
+
 [[./images/vscodeCloneRepoExplorer.png]]
+
 *** github app
 
 ** making changes to the git repo
