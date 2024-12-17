@@ -134,10 +134,25 @@ Once you have made your repository on github the next step it to pull the reposi
 git clone "link to your github goes here"
 #+end_src
 *** Vscode
-*** Xcode
+select the source control tab on the left hand side
+[[./images/vscodeSourceControl.png]]
+after clicking this symbol you will the following window
+[[./images/vscodeSourceControlWindow.png]]
+clicking on clone repository will give the following prompt at the top of the vscode window
+[[./images/cloneFromGithubvscode.png]]
+clicking on the clone from github tab will ask you for permission to log into github from this you will log into github and then your repo will be cloned.
+
+Permission will look similar to this screenshot
+[[./images/vscodeVerifyGithub.png]]
+
+once permission is given the top of the vscode window will look something like this
+[[./images/vscodeCloneRepo.png]]
+After the Hello world repo has been selected vscode will prompt for a location to clone your repo after selecting a location vscode should now have the repository clone and look like this.
+[[./images/vscodeCloneRepoExplorer.png]]
 *** github app
 
 ** making changes to the git repo
+git has a system on how it tracks files and while it will seem complicated at first it is a simple process.
 *** tracking files
 *** adding files
 *** staging files
