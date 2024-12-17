@@ -115,8 +115,28 @@ git config --global user.email "Your github email goes here"
 *** Connect by SSH key
 github has a guide for adding and using an sshkey which can be found here [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]]
 *** Connect by github app
-** Making a repository in github
+** Making a repository
+This way of making a repository is the most simple for a person with no experience in git or github. Alternative methods require knowledge that will be given in later sections.
+**** Go to github profile
+if you have already made a github account your dashboard should be visible from [[https://github.com]] from here you can create a new repository from the repository bar on the left
+[[./images/newRepo.png]]
+**** Name and create the repository
+A repository needs a name for this assignment fill in the field with "SE300HelloWorld"
+[[./images/newRepoName.png]]
+Once you have names the repository click the create button and the repository will be made on github.
+**** Final product
+Your new create repository should look something like the picture below
+[[./images/initialRepoState.png]]
 ** Pull the git repository from github to your computer
+Once you have made your repository on github the next step it to pull the repository onto your computer to make changes. This can be done with the following command.
+*** Command Line
+#+begin_src zsh
+git clone "link to your github goes here"
+#+end_src
+*** Vscode
+*** Xcode
+*** github app
+
 ** making changes to the git repo
 *** tracking files
 *** adding files
