@@ -1,37 +1,39 @@
-#+title: Readme
-#+author: Jackson Baker
+#+title: Git Guide
+#+author: Jackson Baker & Hannah Ramsden
 * Individual lab
-Welcome to the SE300 git lab this lab will help you gain an understanding into how coding in a team environment works in an industry setting utilizing the standard version control software git. This lab will take you through the steps on first managing an individual project with version control using git and a remote code repository hosted on github.
-** Create a github account
-if you do not already have a github account you should be able to click the sign up button on the upper right corner of this page.
+Welcome to the SE300 git lab. This lab will help you understand how coding in a team environment works in an industry setting, utilizing the standard version control software git. It will also take you through the steps to manage an individual project with version control using git and a remote code repository hosted on GitHub.
+** Create a GitHub account
+If you do not have a GitHub account, click the sign-up button at the upper right corner of this page.
 ** Install git
-*** Windows
-The windows version of git should be located at [[https://git-scm.com/downloads/win]]
+*** Windows OS
+
 **** Installer
-The installer is a simple wizard that you should be able to click through until it is installed
+The Windows version of git is located at [[https://git-scm.com/downloads/win]]. The installer is a simple wizard to click through until it is installed.
 **** Winget
-If you have winget installed you can install git through powershell using the following command
+If you have Winget installed, you can install git through Powershell using the following command:
 #+begin_src zsh
 winget install --id Git.Git -e --source winget
 #+end_src
+
 *** Mac
-macOS should ship a copy of git with xcode so if you already have xcode you will already have xcode if you do not here are some options for installing on Mac.
 **** Xcode
-Xcode can be installed from this link [[https://developer.apple.com/xcode/]]
+MacOS users can download XCode through the Apple App Store. Xcode can be installed here [[https://apps.apple.com/us/app/xcode/id497799835?mt=12]]
 **** Homebrew
 If you have homebrew installed run the following command to install git.
 #+begin_src zsh
 brew install git
 #+end_src
-if you do not have homebrew installed and want to use it here is a link to install homebrew [[https://brew.sh/]]
+If you do not have Homebrew installed, the link to install Homebrew is [[https://brew.sh/]]
 **** MacPorts
 If you have MacPorts installed you can run the following command to install git.
 #+begin_src zsh
 sudo port install git
 #+end_src
-you can install MacPorts from this link [[https://www.macports.org/]]
+ MacPorts is installed from this link [[https://www.macports.org/]]
+
 **** Alternative installation methods
 The official git website lists several other alternative ways to install git and can be found at [[https://git-scm.com/downloads/mac]]
+
 *** Linux
 Git for some linux distributions comes by default but below is a list on how to install git for several linux and unix distributions. If these commands do not work and give a permission denied error add sudo to the beginning of the command if it is not already there.
 **** Debian
@@ -95,8 +97,8 @@ apk add git
 tazpkg get-install git
 #+end_src
 
-** Connecting git and github
-There are several ways to connect a git repository and a github account however there are some steps first to do before starting with connecting to github. Git has a config on your computer that tracks who you are when you are making changes in repositories.
+** Connecting Git and GitHub
+There are several ways to connect a Git repository and a GitHub account, however, there are steps that must be completed before connecting to GitHub. Git has a config file on your computer that tracks who you are when making changes in repositories.
 
 Setting a username
 #+begin_src zsh
@@ -105,94 +107,103 @@ git config --global user.name "Your username goes here"
 
 Setting an email
 #+begin_src zsh
-git config --global user.email "Your github email goes here"
+git config --global user.email "Your GitHub email goes here"
 #+end_src
 
 *** Connect by VScode
+[[https://code.visualstudio.com/docs/sourcecontrol/intro-to-git]]
 
 *** Connect by Xcode
+[[https://developer.apple.com/documentation/xcode/configuring-your-xcode-project-to-use-source-control]]
 
 *** Connect by SSH key
-github has a guide for adding and using an sshkey which can be found here [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]]
-*** Connect by github app
+GitHub has a guide for adding and using a ssh-key which can be found here [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]]
+
+*** Connect via GitHub Web
 ** Making a repository
-This way of making a repository is the most simple for a person with no experience in git or github. Alternative methods require knowledge that will be given in later sections.
-**** Go to github profile
-if you have already made a github account your dashboard should be visible from [[https://github.com]] from here you can create a new repository from the repository bar on the left
+This way of making a repository is the simplest when using git or Git Hub. Alternative methods require knowledge that will be given in later sections.
+**** Go to the GitHub profile
+if you have already made a GitHub account your dashboard should be visible from [[https://github.com]] from here you can create a new repository from the repository bar on the left
 
 [[./images/newRepo.png]]
 
-**** Name and create the repository
-A repository needs a name for this assignment fill in the field with "SE300HelloWorld"
+**** Repository Name and Creation
+A repository needs a name for this assignment, fill in the field with "SE300HelloWorld"
 
 [[./images/newRepoName.png]]
 
-Once you have names the repository click the create button and the repository will be made on github.
+Once the repository name is filled in, click the "Create" button. The repository should be created on GitHub.
 **** Final product
-Your new create repository should look something like the picture below
+Your newly created repository should look like the picture below:
 
 [[./images/initialRepoState.png]]
 
-** Pull the git repository from github to your computer
-Once you have made your repository on github the next step it to pull the repository onto your computer to make changes. This can be done with the following command.
+** Pull the git repository from GitHub to your computer
+Once you have made your repository on GitHub the next step is to pull the repository onto your computer to make changes. This can be done with the following command.
 *** Command Line
 #+begin_src zsh
-git clone "link to your github goes here"
+git clone "link to your GitHub goes here"
 #+end_src
+
 *** Vscode
-select the source control tab on the left hand side
+Select the source control tab on the left-hand side
 
 [[./images/vscodeSourceControl.png]]
 
-after clicking this symbol you will the following window
+After clicking this symbol, you will see the following window:
 
 [[./images/vscodeSourceControlWindow.png]]
 
-clicking on clone repository will give the following prompt at the top of the vscode window
+Clicking on "Clone Repository" will give the following prompt at the top of the VScode window
 
 [[./images/cloneFromGithubvscode.png]]
 
-clicking on the clone from github tab will ask you for permission to log into github from this you will log into github and then your repo will be cloned.
+Clicking on the "Clone From GitHub" tab will ask for permission to log into GitHub. Log in, and your repo will be cloned.
 
 Permission will look similar to this screenshot
 
 [[./images/vscodeVerifyGithub.png]]
 
-once permission is given the top of the vscode window will look something like this
+once permission is given the top of the VScode window will look something like this
 
 [[./images/vscodeCloneRepo.png]]
 
-After the Hello world repo has been selected vscode will prompt for a location to clone your repo after selecting a location vscode should now have the repository clone and look like this.
+After the Hello World repo has been selected, vscode will prompt for a location to clone your repo. After selecting your preferred location, vscode will have the repository cloned and look like the image below.
 
 [[./images/vscodeCloneRepoExplorer.png]]
 
-*** github app
+*** Github App
+For the desktop application, click the "add" drop-down. From there, select "Clone Repository..." and choose the "SE300HelloWorld" repository created earlier.
 
-** making changes to the git repo
-git has a system on how it tracks files and while it will seem complicated at first it is a simple process. First is to track and stage a file then to commit the file changes to the git repo and finally push the commited changes back to github.
+** Making Changes to the Git Repo
+Git has a system on how it tracks files and while it will seem complicated at first it is a simple process. First is to track and stage a file then to commit the file changes to the git repo and finally push the committed changes back to github.
 *** tracking files
 git first needs a list of what files in its directory to be tracked this can be done with the terminal command git add
 #+begin_src zsh
 git add <Your file goes here>
 #+end_src
-*** staging files
-Behind the scenes git requires staged and unstaged changes to select which files will be added to a commit. git add will automatically stage a file but when making changes to a file you will need to stage it first before a commit can be made. This can be done with
+
+*** Staging Files
+Behind the scenes, Git requires staged and unstaged changes to select which files will be added to a commit. The command, "Git add," will automatically stage a file. when making changes to a file, you will need to stage the commit before it can be made. This can be done with:
+
 #+begin_src zsh
 git stage <Your file goes here>
 #+end_src
-git add will also work as well as the git documentation describes both git add and git stage as synonyms.
-*** Commiting changes
-git commits act like a save state you can roll back to. Think like in a video game quicksaving before doing something where you stand a high chance of dying. Both staging and tracking are the setup to making a commit for your version control. A commit needs both staged files and a message. In the command line it would look something like this.
+
+"Git Add" will also work as the git documentation, describing both git add and git stage as synonyms.
+*** Committing changes
+Git commits act like a save state you can roll back to. This is similar to a video game quicksaving before doing something where you stand a high chance of dying. Both staging and tracking are the setup to making a commit for your version control. A commit needs both staged files and a message. In the command line, it would look something like this:
 #+begin_src zsh
 git commit -m "Your message goes here"
 #+end_src
-Remember that messages in git have an upper limit of 50 characters so make your messages short.
+Remember that messages in git have an upper limit of 50 characters, so make messages short.
+
 *** Making branches
-When multiple people are working on a remote git repository it may be best to keep work separate if two people make commits around the same time it could block the others work. In order to keep individual work separate you can use git branches to not interupt other peoples changes. A git branch can be made with the following command.
+When multiple people are working on a remote git repository it may be best to keep work separate if two people make commits around the same time it could block the other's work. To keep individual work separate you can use git branches to not interrupt other people's changes. A git branch can be made with the following command.
 #+begin_src zsh
 git checkout -b <Your new branch name>
 #+end_src
-branches can also be made on github by selecting the branches button
+branches can also be made on GitHub by selecting the branches button
 
 [[./images/gitBranch2.png]]
 
