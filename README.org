@@ -241,3 +241,4 @@ Creating the pull request will leave it open. Approving the pull request and mer
 
 After the pull request has been merged you can either choose to delete the branch or keep commiting changes and merge again at a later date.
 ** Final Product: Completed Repo
+Upload your finished Lab document to your new repository. 
