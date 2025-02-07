@@ -15,7 +15,7 @@ If you have Winget installed, you can install git through Powershell using the f
 winget install --id Git.Git -e --source winget
 #+end_src
 
-*** Mac
+*** MacOS
 **** Xcode:
 MacOS users can download XCode through the Apple App Store. Xcode can be installed here [[https://apps.apple.com/us/app/xcode/id497799835?mt=12]]
 **** Homebrew:
